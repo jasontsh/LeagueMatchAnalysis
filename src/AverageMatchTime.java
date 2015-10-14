@@ -33,7 +33,7 @@ public class AverageMatchTime {
 		Gson gson = new Gson();
 		long id = startId;
 		BufferedWriter writer = null;
-		File file = new File("records1.txt");
+		File file = new File("records.txt");
 		while(matches.size() <= 2000){
 			boolean added = false;
 			Match match = null;
