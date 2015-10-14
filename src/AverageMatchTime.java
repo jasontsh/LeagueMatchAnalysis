@@ -35,6 +35,13 @@ public class AverageMatchTime {
 		long id = startId;
 		BufferedWriter writer = null;
 		File file = new File("records.txt");
+		try {
+			writer = new BufferedWriter(new FileWriter(file));
+			writer.write("time\n");
+		} catch (IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
 		while(matches.size() < times){
 			boolean added = false;
 			Match match = null;
