@@ -23,6 +23,7 @@ public class AverageMatchTime {
 	private static final String matchString = "https://na.api.pvp.net/api/lol/na/v2.2/match/";
 	private static final String matchSpec = "?" + MyConstants.apikey;
 	private static long startId = MyConstants.startID;
+	private static final int times = 2000;
 	public static void main(String[] args) {
 		Stack<Long> visited = new Stack<Long>();
 		Stack<Long> next = new Stack<Long>();
@@ -34,7 +35,7 @@ public class AverageMatchTime {
 		long id = startId;
 		BufferedWriter writer = null;
 		File file = new File("records.txt");
-		while(matches.size() <= 2000){
+		while(matches.size() < times){
 			boolean added = false;
 			Match match = null;
 			try{
