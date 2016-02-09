@@ -7,6 +7,7 @@ public class Match {
 	public long matchId;
 	public long matchDuration;
 	public List<ParticipantIdentity> participantIdentities;
+	public List<Participant> participants;
 	
 	@Override
 	public int hashCode() {
